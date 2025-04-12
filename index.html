@@ -12,8 +12,6 @@
 
   <!--  -->
   <link rel="stylesheet" href="./assets/styles/index.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
-
 </head>
 
 <body>
@@ -60,9 +58,9 @@
             </p>
 
             <div class="section-about__logos">
-              <img src="" alt="Logo Cative" class="section-about__logo" />
-              <img src="" alt="Logo AutoNegocie" class="section-about__logo" />
-              <img src="" alt="Logo Grupo 360" class="section-about__logo" />
+              <img src="./assets/images/logo-cative-comunicação.jpeg" alt="Logo Cative" class="section-about__logo" />
+              <img src="./assets/images/logo-auto-negocie.png" alt="Logo AutoNegocie" class="section-about__logo" />
+              <img src="./assets/images/logo-360.png" alt="Logo Grupo 360" class="section-about__logo" />
             </div>
           </div>
         </div>
@@ -134,61 +132,57 @@
     </section>   
     
     <section class="section-testimonials">
-      <div class="section-testimonials__video-container container" id="section-testimonials-responsive">
-        <div class="section-testimonials__wrapper-title">
-          <h2 class="section-testimonials__title title-decoration">Depoimentos</h2>
-        </div>
-      </div>
-
       <div class="section-testimonials__video-container container">
         <div class="section-testimonials__wrapper-title"  id="section-testimonials-desktop">
           <h2 class="section-testimonials__title title-decoration">Depoimentos</h2>
         </div>
 
-        <div class="glider section-testimonials__video-slider">
-          <div class="section-testimonials__video-item"> <!-- Slide 1 -->
-            <img src="https://randomuser.me/api/portraits/women/73.jpg" />
+        <div class="section-testimonials__video-wrapper">
+        <div class="section-testimonials__videos">
+          <div class="section-testimonials__video-item">
+            <div id="vid_67f96c0d6531e7d90eac4963" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0;"> 
+              <img id="thumb_67f96c0d6531e7d90eac4963" src="https://images.converteai.net/d5fc372b-928b-4d66-b772-7d4a3280f023/players/67f96c0d6531e7d90eac4963/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail"> 
+              <div id="backdrop_67f96c0d6531e7d90eac4963" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div> 
+            </div>
           </div>
-          <div class="section-testimonials__video-item"> <!-- Slide 2 -->
-            <img src="https://randomuser.me/api/portraits/women/75.jpg" />
+          <div class="section-testimonials__video-item"> 
+            <img src="./assets/images/preview-video.png" />
           </div>
-          <div class="section-testimonials__video-item"> <!-- Slide 3 -->
-            <img src="https://randomuser.me/api/portraits/women/76.jpg" />
+          <div class="section-testimonials__video-item">
+            <img src="./assets/images/preview-video.png" />
           </div>
-          <!-- <span style="width: 20px !important;" id="slide-hidden"></div> -->
-        </div>
-              
+        </div>  
       </div>
-    
-      <div class="section-testimonials__quotes">
-        <div class="container">
-          <h3 class="section-testimonials__subtitle">O que nossos profissionais dizem</h3>
-          <div class="section-testimonials__cards">
-            <div class="section-testimonials__card">
-              <img src="https://randomuser.me/api/portraits/women/75.jpg" class="profile" alt="">
-              <p class="section-testimonials__text">
-                "Trabalhar aqui foi uma experiência incrível! O ambiente é acolhedor e repleto de oportunidades para crescer."
-                <br> <br> <span>Laura Ribeiro</span>
-              </p>
-            </div>
-            <div class="section-testimonials__card">
-              <img src="https://randomuser.me/api/portraits/men/75.jpg" class="profile" alt="">
-              <p class="section-testimonials__text">
-                "A cultura da empresa valoriza feedbacks e criatividade. Me sinto desafiado e motivado todos os dias."
-                <br> <br> <span>João Soares</span>
-              </p>
-            </div>
-            <div class="section-testimonials__card">
-              <img src="https://randomuser.me/api/portraits/women/5.jpg" class="profile" alt="">
-              <p class="section-testimonials__text">
-                "Desde que entrei no Grupo 360, me desenvolvi como nunca. Um excelente lugar para crescer pessoal e profissionalmente."
-                <br> <br> <span>Viviane Machado</span>
-              </p>
-            </div>
+    </section>  
+
+    <section class="section-testimonials__quotes">
+      <div class="container">
+        <h3 class="section-testimonials__subtitle">O que nossos profissionais dizem</h3>
+        <div class="section-testimonials__cards">
+          <div class="section-testimonials__card">
+            <img src="./assets/images/profile-laura.jpg" class="profile" alt="">
+            <p class="section-testimonials__text">
+              "Trabalhar aqui foi uma experiência incrível! O ambiente é acolhedor e repleto de oportunidades para crescer."
+              <br> <br> <span>Laura Ribeiro</span>
+            </p>
+          </div>
+          <div class="section-testimonials__card">
+            <img src="./assets/images/profile-joao.jpg" class="profile" alt="">
+            <p class="section-testimonials__text">
+              "A cultura da empresa valoriza feedbacks e criatividade. Me sinto desafiado e motivado todos os dias."
+              <br> <br> <span>João Soares</span>
+            </p>
+          </div>
+          <div class="section-testimonials__card">
+            <img src="./assets/images/profile-viviane.jpg" class="profile" alt="">
+            <p class="section-testimonials__text">
+              "Desde que entrei no Grupo 360, me desenvolvi como nunca. Um excelente lugar para crescer pessoal e profissionalmente."
+              <br> <br> <span>Viviane Machado</span>
+            </p>
           </div>
         </div>
       </div>
-    </section>   
+    </section>
 
     <section class="section-form">
       <div class="container">
@@ -206,10 +200,27 @@
             <label for="area">Área de interesse</label>
             <select id="area">
               <option>Selecione uma área</option>
+              <option value="atendimento_e_relacionamento">Atendimento e Relacionamento</option>
+              <option value="social_media">Social Media</option>
+              <option value="copywriting">Copywriting</option>
+              <option value="videomaker">VideoMaker</option>
+              <option value="trafego_digital">Tráfego Digital</option>
+              <option value="estrategia">Estratégia</option>
+              <option value="design">Design</option>
+              <option value="recursos_humanos">Recursos Humanos</option>
+              <option value="financeiro">Financeiro</option>
+              <option value="marketing">Marketing</option>
+              <option value="compras">Compras</option>
+              <option value="tecnologia_e_dados">Tecnologia e Dados</option>
+              <option value="comercial">Comercial</option>
+              <option value="automacao_e_crm">Automação e CRM</option>
             </select>
         
             <label for="resume">Currículo</label>
-            <input type="file" id="resume" />
+            <div id="custom-input-file">
+              Escolher arquivo
+              <input type="file" id="resume" placeholder="Escolher arquivo" />
+            </div>
         
             <button type="submit">ENVIAR</button>
           </form>
@@ -232,42 +243,70 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
-   <script>
-    new Glider(document.querySelector('.glider'), {
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      draggable: true,
-      dots: false,
-      arrows: false,
+  <script type="text/javascript" id="scr_67f96c0d6531e7d90eac4963"> 
+    var s=document.createElement("script"); s.src="https://scripts.converteai.net/d5fc372b-928b-4d66-b772-7d4a3280f023/players/67f96c0d6531e7d90eac4963/player.js", s.async=!0,document.head.appendChild(s); 
+  </script>
+
+  <script>
+    const form = document.querySelector('.section-form form');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name');
+      const phone = document.getElementById('phone');
+      const email = document.getElementById('email');
+      const area = document.getElementById('area');
+      const resume = document.getElementById('resume');
+
+      let errors = [];
+
+      // Nome
+      if (name.value.trim() === '') {
+        errors.push('Preencha o nome');
+      } else if (!validateFullName(name.value)) {
+        errors.push('Digite seu nome completo');
+      }
+
+      // Telefone
+      if (phone.value.trim() === '') {
+        errors.push('Preencha o telefone');
+      }
+
+      // Email
+      if (email.value.trim() === '') {
+        errors.push('Preencha o e-mail');
+      } else if (!validateEmail(email.value)) {
+        errors.push('E-mail inválido');
+      }
+
+      // Área de interesse
+      if (area.value === '' || area.selectedIndex === 0) {
+        errors.push('Selecione uma área de interesse');
+      }
+
+      // Currículo
+      if (resume.files.length === 0) {
+        errors.push('Anexe seu currículo');
+      }
+
+      if (errors.length > 0) {
+        alert(errors.join('\n'));
+      } else {
+        alert('Formulário enviado com sucesso!');
+        form.submit();
+      }
     });
 
+    function validateEmail(email) {
+      const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      return re.test(email.toLowerCase());
+    }
 
-    // const slider = document.getElementById('videoSlider');
-    // slider.addEventListener('click', (event) => {
-    //   const clickedItem = event.target.closest('.section-testimonials__video-item');
-    //   if (!clickedItem) return;
-
-    //   const items = Array.from(slider.children);
-    //   const clickedIndex = items.indexOf(clickedItem);
-
-    //   if (clickedIndex === 0) return;
-    //   const reorderedItems = [...items.slice(clickedIndex), ...items.slice(0, clickedIndex)];
-
-    //   while (slider.firstChild) {
-    //     slider.removeChild(slider.firstChild);
-    //   }
-
-    //   reorderedItems.forEach((item, index) => {
-    //     item.classList.remove('section-testimonials__video-item--active', 'section-testimonials__video-item--blurred');
-    //     if (index === 0) {
-    //       item.classList.add('section-testimonials__video-item--active');
-    //     } else {
-    //       item.classList.add('section-testimonials__video-item--blurred');
-    //     }
-    //     slider.appendChild(item);
-    //   });
-    // });
+    function validateFullName(name) {
+      const parts = name.trim().split(' ');
+      return parts.length >= 2 && parts.every(part => part.length > 1);
+    }
   </script>
 </body>
 </html>
