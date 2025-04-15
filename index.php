@@ -1,3 +1,72 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
+$to = "gnerisdev@gmail.com"; 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name   = htmlspecialchars(trim($_POST["name"]));
+  $phone  = htmlspecialchars(trim($_POST["phone"]));
+  $email  = htmlspecialchars(trim($_POST["email"]));
+  $area   = htmlspecialchars(trim($_POST["area"]));
+  $resume = $_FILES["resume"];
+
+  if (empty($name) || empty($phone) || empty($email) || empty($area) || empty($resume['name'])) {
+    echo "<script>alert('Todos os campos são obrigatórios.'); history.back();</script>";
+    exit();
+  }
+
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "<script>alert('E-mail inválido.'); history.back();</script>";
+    exit();
+  }
+
+  $subject = "Novo formulário enviado";
+  $body = "Nome: $name\n";
+  $body .= "Telefone: $phone\n";
+  $body .= "E-mail: $email\n";
+  $body .= "Área de interesse: $area\n";
+
+  try {
+    $mail = new PHPMailer(true);
+    $mail->CharSet = 'UTF-8';
+    $mail->isSMTP();
+    $mail->Host = 'smtp.zoho.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'contato@gnerisdev.com';
+    $mail->Password = 'aCDPA5MpWPTK';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+    $mail->setFrom('contato@gnerisdev.com', 'Formulário Landing Page Talentos');
+    $mail->addAddress($to, 'Você');
+    $mail->addReplyTo($email, $name);
+    $mail->isHTML(false); 
+    $mail->Subject = $subject;
+    $mail->Body    = $body;
+
+    // File
+    if (is_uploaded_file($resume['tmp_name'])) {
+      $mail->addAttachment($resume['tmp_name'], $resume['name']);
+    }
+
+    // Send
+    if ($mail->send()) {
+      echo "Formulário enviado com sucesso!";
+      header("Location: gratitude.php");
+    } else {
+      echo "<script>alert('Erro ao enviar o formulário. Tente novamente.');</script>";
+      exit();
+    }
+  } catch (Exception $e) {
+    echo "<script>alert('Erro ao enviar o formulário. Tente novamente.');</script>";
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
